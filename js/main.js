@@ -39,7 +39,7 @@
 
 /*把code写到pre和style标签里*/
 function writeCss(prefix, code, fn){
-  // 原理见https://codepen.io/kongzq/pen/jZmPeL
+  // 原理见https://codepen.io/ScottHuang/pen/jZmPeL
   let domCode = document.querySelector('#code')
   let n = 0
 
@@ -198,7 +198,7 @@ writeCss('', css1, ()=>{
         convertMarkdownToHtml(()=>{
           writeCss(css1 + css2, css3, ()=> {
             console.log('完成')
-          })git init
+          })
         })
       })
     })
