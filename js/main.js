@@ -77,7 +77,7 @@ function writeCss(prefix, code, fn){
 
 
 function writeMarkdown(markdown, fn){
-  //原理和writeCss一样，只有不用高亮
+  //原理和writeCss一样，只是不用高亮
   let domPaper = document.querySelector('#paper>.content')
   let n = 0
   let id = setInterval(() => {
@@ -119,9 +119,7 @@ function convertMarkdownToHtml(fn){
 
 //因为css1要被插入style标签，所以其中非css的部分要加注释
 var css1 = `/* 
- * 面试官你好，我是XXX
- * 只用文字作做我介绍太单调了
- * 我就用代码来介绍吧
+
  * 首先准备一些样式
  */
 
@@ -164,7 +162,7 @@ html{
 `
 
 var css2 = `
-/* 接下来用一个优秀的库 marked.js
+/* 接下来用一个库 marked.js
  * 把 Markdown 变成 HTML
  */
 
@@ -172,13 +170,7 @@ var css2 = `
 
 `
 var md = `
-# 自我介绍
 
-我叫 XXX
-1990 年 1 月出生
-XXX 学校毕业
-自学前端半年
-希望应聘前端开发岗位
 
 # 技能介绍
 
@@ -190,58 +182,11 @@ XXX 学校毕业
 2. XXX 简历
 3. XXX 画板
 
-# 联系方式
 
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
-
-# 联系方式
-
-- QQ xxxxxxxx
-- Email xxxxxxxx
-- 手机 xxxxxxx
 `
 let css3 = `
-/*
- * 这就是我的会动的简历
- * 谢谢观看
+
+/* 谢谢观看
  */
 `
 
@@ -253,7 +198,7 @@ writeCss('', css1, ()=>{
         convertMarkdownToHtml(()=>{
           writeCss(css1 + css2, css3, ()=> {
             console.log('完成')
-          })
+          })git init
         })
       })
     })
